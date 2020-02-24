@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :rentals
-  has_many :equipments
+  # has_many :gears, through: :rentals
+  has_many :gears
 end
