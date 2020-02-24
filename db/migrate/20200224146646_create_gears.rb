@@ -1,6 +1,6 @@
-class CreateEquipment < ActiveRecord::Migration[6.0]
+class CreateGears < ActiveRecord::Migration[6.0]
   def change
-    create_table :equipment do |t|
+    create_table :gears do |t|
       t.references :user, null: false, foreign_key: true
       t.string :brand
       t.string :model
