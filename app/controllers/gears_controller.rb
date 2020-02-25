@@ -5,6 +5,9 @@ class GearsController < ApplicationController
     @gears = Gear.all
   end
 
+  def dashboard
+  end
+
   def show; end
 
   # def create
