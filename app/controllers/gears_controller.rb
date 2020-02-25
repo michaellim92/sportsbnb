@@ -6,7 +6,7 @@ class GearsController < ApplicationController
   end
 
   def dashboard
-    
+    # @gear = Gear.
   end
 
   def show; end
