@@ -1,1 +1,10 @@
-<h1>dashboard</h1>
+<div class="container">
+	<h1>SportBnB</h1>
+	<ul class="categories">
+		<% @categories.uniq.each do |category| %>
+			<div class="category">
+				<li><%= category %></li>
+			</div>
+		<% end %>
+	</ul>
+</div>
