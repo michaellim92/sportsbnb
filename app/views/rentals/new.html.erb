@@ -1,0 +1,7 @@
+<h1>Rentals</h1>
+<%= simple_form_for[@gear, @rental] do |f| %>
+  <% f.input :starts_at %>
+  <% f.input :ends_at %>
+  <% f.input :total_price %>
+  <% f.input :status %>
+<% end %>

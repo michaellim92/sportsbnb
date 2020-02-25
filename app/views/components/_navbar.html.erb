@@ -1,18 +1,20 @@
 <div class="nav-container">
   <div class="navbar">
-    <div class="logo">
-      <!-- logo -->
-    </div>
+    <%= link_to root_path do%>
+      <div class="logo">
+        <!-- logo -->
+      </div>
+    <% end %>
     <div class="btn-containers">
       <div>
         <ul class="nav-btns">
           <li class="nav-btn">Browse Gear</li>
           <%= link_to dashboard_path do %>
-            <li class="nav-btn">
-              List Gear
-            </li>
+            <li class="nav-btn">List Gear</li>
           <% end %>
-          <li class="nav-btn">My Rentals</li>
+          <%#= link_to dashboard_path do (should link to the rentals index page)%> 
+            <li class="nav-btn">My Rentals</li>
+            <%# <% end %> %>
         </ul>
       </div>
       <div class="avatar">
