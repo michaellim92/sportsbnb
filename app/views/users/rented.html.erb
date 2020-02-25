@@ -1,0 +1,10 @@
+<h1>Your Rentals</h1>
+<% @rentals.each do |r| %>
+  <%= r.gear.brand %>
+  <%= r.gear.model %>
+  <%= r.starts_at %>
+  <%= r.ends_at %>
+  <%= r.total_price %>
+  <%= r.status %>
+  <%= link_to "Edit", edit_gear_path(g) %>
+<% end %>

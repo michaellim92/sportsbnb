@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     resources :rentals, only: [:new, :create]
   end
   resources :rentals, only: :destroy
+  get "dashboard", to: "users#dashboard", as: :dashboard
+  get "rented", to: "users#rented", as: :rented
 end
