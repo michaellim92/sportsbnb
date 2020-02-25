@@ -1,10 +1,12 @@
 <div class="container">
 	<h1>SportBnB</h1>
 	<ul class="categories">
-		<% @categories.uniq.each do |category| %>
-			<div class="category">
-				<li><%= category %></li>
-			</div>
+		<% Gear::CATEGORIES.each do |category| %>
+			<%= link_to gears_path(category: category[:name]) do %>
+				<div class="category">
+					<li><%= category[:name] %></li>
+				</div>
+			<% end %>
 		<% end %>
 	</ul>
 </div>

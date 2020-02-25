@@ -6,12 +6,14 @@ class GearsController < ApplicationController
   end
 
   def dashboard
-    @categories = []
-    @gears = Gear.all
-    @gears.each do |gear|
-      @categories << gear.category
-    end
-    @categories = @categories.sort
+    # @categories = []
+    # @gears = Gear.all
+    # @gears.each do |gear|
+    #   @categories << gear.category
+    # end
+    # @categories = @categories.sort
+    # @categories = Gear.all.map(&:category).sort
+    # @categories = Gear.all.pluck(:category).uniq.sort
   end
 
   def show; end
