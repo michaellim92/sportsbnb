@@ -10,19 +10,19 @@ class GearsController < ApplicationController
 
   def show; end
 
-  # def create
-  #   @gear = Gear.new(gears_params)
-  #   @gear.user = current_user 
-  #   if @gear.save
-  #     redirect_to gear_path(@gear)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @gear = Gear.new(gears_params)
+    @gear.user = current_user 
+    if @gear.save
+      redirect_to gear_path(@gear)
+    else
+      render :new
+    end
+  end
 
-  # def new
-  #   @gear = Gear.new
-  # end
+  def new
+    @gear = Gear.new
+  end
 
   # def edit; end
 
