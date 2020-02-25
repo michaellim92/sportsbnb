@@ -1,0 +1,8 @@
+<h1>All Listings</h1>
+<% @gears.each do |g| %>
+  <%= g.brand %>
+  <%= g.model %>
+  <%= link_to "Edit", edit_gear_path(g) %>
+<% end %>
+
+<%= link_to "Add New Gear", new_gear_path %>

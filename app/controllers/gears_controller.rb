@@ -1,11 +1,12 @@
 class GearsController < ApplicationController
 
-  before_action :find_gear, only: [:show] # please add edit and destroy when needed
+  before_action :find_gear, only: [:show, :edit, :destroy]
   def index
     @gears = Gear.all
   end
 
   def dashboard
+    
   end
 
   def show; end
@@ -24,17 +25,17 @@ class GearsController < ApplicationController
     @gear = Gear.new
   end
 
-  # def edit; end
+  def edit; end
 
-  # def update
-  #   @gear = Gear.update(gears_params)
-  #   redirect_to gear_path(@gear)
-  # end
+  def update
+    @gear = Gear.update(gears_params)
+    redirect_to gear_path(@gear)
+  end
 
-  # def destroy
-  #   @gear.destroy
-  #   redirect_to gears_path
-  # end
+  def destroy
+    @gear.destroy
+    redirect_to gears_path
+  end
 
   private
 
