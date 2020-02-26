@@ -1,20 +1,14 @@
-.navbar {
-  display: flex;
-  align-items: center;
-  background-color: blue;
+.navbar-lewagon {
   justify-content: space-between;
+  background: white;
+}
 
-  .nav-btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
 
-    .nav-btn {
-      margin-right: 40px;
-    }
-  }
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }
 
 .avatar, .logo {
@@ -22,15 +16,6 @@
   width: 40px;
   border-radius: 50%;
   background-color: gray;
-}
-
-.btn-containers {
-  display: flex;
-  width: 50%;
-}
-
-.show {
-  display: block;
 }
 
 .avatar-drop-down {
