@@ -1,13 +1,15 @@
-<div>
+<div class="show-body">
   <div class="show-images">
-    <%#= image_tag %>
+    <%= image_tag "rockclimbing.jpg"%>
   </div>
   <div class="show-info">
-    <h2>@gear.brand</h2>
-    <h3>@gear.model</h3>
-    <h3>@gear.category</h3>
-    <p>@gear.description</p>
-    <p>@gear.price_per_day</p>
+    <h2><%= @gear.brand.upcase %></h2>
+    <h3><%= @gear.model.upcase %></h3>
+    <h4><%= @gear.category %></h4>
+    <p><%= @gear.description.capitalize %></p>
+    <p>£<%= @gear.price_per_day %> per day</p>
+    <%= link_to "Rent Now", new_gear_rental_path(@gear) %>
   </div>
+  <%#= link_to "Rent Now", %>
 </div>
 
