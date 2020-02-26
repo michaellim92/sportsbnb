@@ -4,11 +4,7 @@
 @import "navbar";
 
 body {
-	font-family: arial;
-}
-
-a {
-	color: #ffffff;
+	background-color: #ffffff;
 }
 
 a:hover {
@@ -17,6 +13,11 @@ a:hover {
 
 li {
 	list-style: none;
+}
+
+.category > li > h2 {
+	font-size: 20px;
+	color: #ffffff;
 }
 
 .container {
@@ -40,9 +41,9 @@ li {
 	justify-content: center;
 	align-items: center;
 	padding: 30px 30px;
-	border: 1px solid gray;
 	height: 140px;
-	border-radius: 5%;
+	border-radius: 3%;
+	box-shadow: 2px 2px 4px grey;
 }
 
 .category > li {
