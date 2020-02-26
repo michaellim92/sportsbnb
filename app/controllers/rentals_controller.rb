@@ -8,6 +8,7 @@ class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
     @rental.gear = @gear
+    @rental.user = current_user
     if @rental.save
       redirect_to dashboard_path
     else
