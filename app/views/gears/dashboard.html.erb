@@ -3,7 +3,7 @@
 	<ul class="categories">
 		<% Gear::CATEGORIES.each do |category| %>
 			<%= link_to gears_path(category: category[:name]) do %>
-				<div class="category">
+				<div class="category" style="background-image: linear-gradient(to right, rgba(1, 1, 2, 0.14), rgba(128, 128, 128, 0.52)), url(<%= category[:photo] %>)">
 					<li><%= category[:name] %></li>
 				</div>
 			<% end %>

@@ -3,40 +3,40 @@ class Gear < ApplicationRecord
   has_many :rentals, dependent: :destroy
   CATEGORIES = [
     {
-      name: 'Rock Climbing'#,
-      # photo: ,
+      name: 'Rock Climbing',
+      photo: 'assets/rockclimbing.jpg',
     },
     {
-      name: 'Snowboarding'#,
-      # photo: ,
+      name: 'Snowboarding',
+      photo: 'assets/snowboarding.jpg',
     },
     {
-      name: 'Skiing'#,
-      # photo: ,
+      name: 'Skiing',
+      photo: 'assets/skiing.jpg',
     },
     {
-      name: 'Basketball'#,
-      # photo: ,
+      name: 'Basketball',
+      photo: 'assets/basketball.png',
     },
     {
-      name: 'Soccer'#,
-      # photo: ,
+      name: 'Soccer',
+      photo: 'assets/soccer.jpg',
     },
     {
-      name: 'Tennis'#,
-      # photo: ,
+      name: 'Tennis',
+      photo: 'assets/tennis.jpg',
     },
     {
-      name: 'Flag Football'#,
-      # photo: ,
+      name: 'Flag Football',
+      photo: 'assets/flagfootball.png',
     },
     {
-      name: 'Golf'#,
-      # photo: ,
+      name: 'Golf',
+      photo: 'assets/golfing.jpg',
     },
     {
-      name: 'Hiking'#,
-      # photo: ,
+      name: 'Hiking',
+      photo: 'assets/hiking.jpg',
     }
   ].freeze
 end

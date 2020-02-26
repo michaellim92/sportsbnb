@@ -2,6 +2,10 @@ class GearsController < ApplicationController
 
   before_action :find_gear, only: [:show] # please add edit and destroy when needed
   def index
+    # if params[:category] is there
+    # then filter gears with .where(...)
+    # else
+    # Gear.all
     @gears = Gear.all
   end
 
