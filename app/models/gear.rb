@@ -4,39 +4,39 @@ class Gear < ApplicationRecord
   CATEGORIES = [
     {
       name: 'Rock Climbing',
-      photo: 'assets/rockclimbing.jpg',
+      photo: 'assets/categories/rockclimbing.jpg',
     },
     {
       name: 'Snowboarding',
-      photo: 'assets/snowboarding.jpg',
+      photo: 'assets/categories/snowboarding.jpg',
     },
     {
       name: 'Skiing',
-      photo: 'assets/skiing.jpg',
+      photo: 'assets/categories/skiing.jpg',
     },
     {
       name: 'Basketball',
-      photo: 'assets/basketball.png',
+      photo: 'assets/categories/basketball.png',
     },
     {
       name: 'Soccer',
-      photo: 'assets/soccer.jpg',
+      photo: 'assets/categories/soccer.jpg',
     },
     {
       name: 'Tennis',
-      photo: 'assets/tennis.jpg',
+      photo: 'assets/categories/tennis.jpg',
     },
     {
       name: 'Flag Football',
-      photo: 'assets/flagfootball.png',
+      photo: 'assets/categories/flagfootball.png',
     },
     {
       name: 'Golf',
-      photo: 'assets/golfing.jpg',
+      photo: 'assets/categories/golfing.jpg',
     },
     {
       name: 'Hiking',
-      photo: 'assets/hiking.jpg',
+      photo: 'assets/categories/hiking.jpg',
     }
   ].freeze
 end

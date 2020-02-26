@@ -18,9 +18,12 @@
     <script>
       // avatar navbar menu
       const avatar = document.getElementById("profile-avatar");
-      const dropdown = document.getElementById("avatar-drop-down");
+      console.log(avatar);
+      const dropdown = document.querySelector(".dropdown");
       avatar.addEventListener("click", (e) => {
-        dropdown.classList.toggle(".show");
+        console.log("hello");
+        console.log(e.currentTarget);
+        dropdown.classList.toggle("d-none");
       });
     </script>
   </body>
