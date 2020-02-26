@@ -11,7 +11,7 @@ class RentalsController < ApplicationController
     @rental.user = current_user
     # @rental.total_price = (@gear.price_per_day || 10) * (((@rental.ends_at - @rental.starts_at)/86400000).round + 1)
     if @rental.save
-      redirect_to dashboard_path
+      redirect_to rented_path
     else
       render :new
     end
