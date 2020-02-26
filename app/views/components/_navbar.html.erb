@@ -9,7 +9,9 @@
     <div class="btn-containers">
       <div>
         <ul class="nav-btns">
-          <li class="nav-btn">Browse Gear</li>
+          <%= link_to gears_path do %>
+            <li class="nav-btn">Browse Gear</li>
+          <% end %>
           <%= link_to dashboard_path do %>
             <li class="nav-btn">List Gear</li>
           <% end %>

@@ -9,7 +9,7 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.gear = @gear
     if @rental.save
-      redirect_to gear_path(@gear)
+      redirect_to dashboard_path
     else
       render :new
     end

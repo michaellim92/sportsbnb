@@ -1,22 +1,26 @@
 .show-body {
+  background-color: red;
   display: flex;
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 .show-images {
-  width: 50%;
-  height: 100%;
+  width: 40%;
+  height: auto;
   background-color: lightgray;
 }
 
 .show-info {
-  width: 50%;
-  height: 100%;
+  width: 40%;
+  height: auto;
   margin: 0 auto;
   h2 {
     width: 100%;
     background: gray;
+<<<<<<< Updated upstream
     height: 200px;
+=======
+>>>>>>> Stashed changes
   }
 }
