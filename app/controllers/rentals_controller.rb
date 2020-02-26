@@ -10,7 +10,7 @@ class RentalsController < ApplicationController
     @rental.gear = @gear
     @rental.user = current_user
     if @rental.save
-      redirect_to gear_path(@gear)
+      redirect_to dashboard_path
     else
       render :new
     end
