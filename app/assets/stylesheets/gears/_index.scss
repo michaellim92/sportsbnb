@@ -1,0 +1,27 @@
+
+.my-grid{
+  display: flex;
+  justify-content: space-around;
+
+
+  .left-wrap {
+    width: 30vw;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .right-wrap {
+    width: 60vw;
+    background-color: lightyellow;
+  }
+
+  .gear-card{
+
+    .gear-card-link{
+
+    }
+  }
+}
