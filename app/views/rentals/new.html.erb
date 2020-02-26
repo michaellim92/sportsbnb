@@ -15,12 +15,16 @@
       <%= simple_form_for [@gear, @rental] do |f| %>
         <%= f.input :starts_at %>
         <%= f.input :ends_at %>
-          <% f.input :total_price %>
-          <% f.input :status %>
+        <% f.input :total_price %>
+        <% f.input :status %>
+        <br>
+      <h2>Adding payment information</h2>
+        <label for="p">Card number</label>
+        <input type="text">
+        <br>
+        <br>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
-
-
     </div>
   </div>
 </div>

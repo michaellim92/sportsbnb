@@ -1,10 +1,14 @@
 <h1>My Rentals</h1>
 <% @rentals.each do |r| %>
-  <%= r.gear.brand %>
-  <%= r.gear.model %>
-  <%= r.starts_at %>
-  <%= r.ends_at %>
-  <%= r.total_price %>
-  <%= r.status %>
-  <%= link_to "Edit", edit_gear_path(r) %>
+  <ul>
+    <li><%= r.gear.brand %></li>
+    <li><%= r.gear.model %></li>
+    <li><%= r.starts_at %></li>
+    <li><%= r.ends_at %></li>
+    <li><%= r.total_price %></li>
+    <li><%= r.status %></li>
+    <li><%= link_to "Edit", edit_gear_path(r)%></li>
+  </ul>
 <% end %>
+
+<p><%= link_to "Return to dashboard", dashboard_path%></p>
