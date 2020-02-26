@@ -20,11 +20,13 @@ class GearsController < ApplicationController
     # @categories = Gear.all.pluck(:category).uniq.sort
   end
 
-  def show; end
+  def show
+    find_gear
+  end
 
   def create
     @gear = Gear.new(gears_params)
-    @gear.user = current_user 
+    @gear.user = current_user
     if @gear.save
       redirect_to gear_path(@gear)
     else
