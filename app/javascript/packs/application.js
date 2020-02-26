@@ -23,3 +23,41 @@ require("channels")
 // ----------------------------------------------------
 
 import "bootstrap";
+
+const totalPrice = document.querySelector(".total-price");
+const price = parseInt(totalPrice.dataset.price, 10)
+const inputTotalPrice = document.getElementById("total_price");
+if (totalPrice) {
+  const startsAt = document.getElementById("rental_starts_at");
+  const endsAt = document.getElementById("rental_ends_at");
+  startsAt.addEventListener("change", () => {
+    let startsAtDate = Date.parse(startsAt.value);
+    let endsAtDate = Date.parse(endsAt.value);
+    if (startsAtDate > endsAtDate) {
+      let result = "Ends at should be greater than Starts at!"
+      totalPrice.classList.remove("d-none")
+      totalPrice.innerText = result
+    } else {
+      let diffTime = Math.abs(endsAtDate - startsAtDate);
+      let result = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      totalPrice.classList.remove("d-none")
+      totalPrice.innerText = `Total price: £${result * price}`
+      inputTotalPrice.value = result * price
+    }
+  })
+  endsAt.addEventListener("change", () => {
+    let startsAtDate = Date.parse(startsAt.value);
+    let endsAtDate = Date.parse(endsAt.value);
+    if (startsAtDate > endsAtDate) {
+      let result = "Ends at should be greater than Starts at!"
+      totalPrice.classList.remove("d-none")
+      totalPrice.innerText = result
+    } else {
+      let diffTime = Math.abs(endsAtDate - startsAtDate);
+      let result = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      totalPrice.classList.remove("d-none")
+      totalPrice.innerText = `Total price: £${result * price}`
+      inputTotalPrice.value = result * price
+    }
+  })
+}

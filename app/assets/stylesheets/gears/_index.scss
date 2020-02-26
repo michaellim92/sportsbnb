@@ -1,0 +1,31 @@
+
+.my-grid{
+  display: flex;
+  justify-content: space-around;
+
+
+  .left-wrap {
+    width: 20vw;
+    border: lightgrey 1px solid;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80vh;
+    padding-left: 30px;
+  }
+
+  .right-wrap {
+    width: 50vw;
+  }
+
+  .gear-card{
+
+    .gear-card-link{
+
+    }
+  }
+}
+
+.size > input {
+  display: inline;
+}

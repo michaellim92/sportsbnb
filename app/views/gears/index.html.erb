@@ -1,1 +1,56 @@
-# equipment index page
+<div class="container">
+  <h2>Rent Snowboarding Gear</h2>
+  <div class="my-grid">
+    <div class="left-wrap">
+      <div class="gender-filter">
+        <h5>Gender</h5>
+        <form action="">
+          <input type="checkbox" id="gender1" name="gender1" value="Male">
+          <label for="gender1">Man</label><br>
+          <input type="checkbox" id="gender2" name="gender2" value="Female">
+          <label for="gender2">Women</label><br>
+          <input type="checkbox" id="gender3" name="gender3" value="Kids">
+          <label for="gender3">Kids</label><br>
+          <input type="checkbox" id="gender4" name="gender4" value="Unisex">
+          <label for="gender4">Unisex</label>
+        </form>
+      </div>
+      <div class="color-filter">
+        <h5>Color</h5>
+        <form action="">
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+          <input type="color" id="favcolor" name="favcolor" value="#0000FF">
+          <input type="color" id="favcolor" name="favcolor" value="#000000">
+          <input type="color" id="favcolor" name="favcolor" value="#FFFFFF"><br>
+          <input type="color" id="favcolor" name="favcolor" value="#49DC24">
+          <input type="color" id="favcolor" name="favcolor" value="#555F52">
+          <input type="color" id="favcolor" name="favcolor" value="#24BEDC">
+          <input type="color" id="favcolor" name="favcolor" value="#E424F2">
+        </form>
+      </div>
+      <div class="size-filter">
+        <h5>Size</h5>
+        <form class="size" action="">
+          <input type="checkbox" id="size1" name="size1" value="XS">
+          <label for="size1">Extra-Small</label><br>
+          <input type="checkbox" id="size2" name="size2" value="S">
+          <label for="size2">Small</label><br>
+          <input type="checkbox" id="size3" name="size3" value="M">
+          <label for="size3">Medium</label><br>
+          <input type="checkbox" id="size4" name="size4" value="L">
+          <label for="size4">Large</label><br>
+          <input type="checkbox" id="size5" name="size5" value="XL">
+          <label for="size5">Extra-Large</label>
+        </form>
+      </div>
+    </div>
+    <div class="row right-wrap">
+        <% @gears.each do |gear| %>
+      <%#= link_to "click me", gear_path(gear), class: 'gear-card-holder'  %>
+        <div class="gear-card col-4 mb-3">
+          <%= render "gear-card", gear: gear %>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>

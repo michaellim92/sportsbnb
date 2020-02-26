@@ -14,5 +14,17 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <script>
+      // avatar navbar menu
+      const avatar = document.getElementById("profile-avatar");
+      console.log(avatar);
+      const dropdown = document.querySelector(".dropdown");
+      avatar.addEventListener("click", (e) => {
+        console.log("hello");
+        console.log(e.currentTarget);
+        dropdown.classList.toggle("d-none");
+      });
+    </script>
   </body>
 </html>

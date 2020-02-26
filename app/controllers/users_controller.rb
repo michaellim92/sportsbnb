@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
-  def gears
-    # list all rental gears from current_user
+  def rented
+    @rentals = Rental.where(user:current_user)
   end
 
   def dashboard
