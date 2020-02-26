@@ -1,0 +1,55 @@
+#show-body {
+  display: flex;
+  height: 80vh;
+  width: auto;
+}
+.show-images {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content:space-between;
+
+  .carousel-item img {
+    max-height: 500px !important;
+  }
+
+  #show-image {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: white;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    height: 70px;
+    text-align: center;
+    background: white;
+  }
+
+  .show-info-description {
+    padding: 16px 25px;
+    background-color: lightgray;
+    height: 100%;
+    text-align: left;
+    width: 75%;
+  }
+  .rent-now-btn {
+    width: 50%;
+    margin-top: 40px;
+  }
+}
