@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
+  
+  def rented
+    @rentals = Rental.where(user:current_user)
+  end
 
-  def gears
-    # list all rental gears from current_user
+  def dashboard
+    @gears = Gear.where(user: current_user)
   end
 end
