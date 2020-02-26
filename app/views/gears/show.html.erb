@@ -1,11 +1,9 @@
 <div>
   <h1>Gear List</h1>
   <div>
-    <% Gears.each do |gear| %>
-      <%= gear.brand %>
-      <%= gear.model %>
-      <%= gear.category %>
-      <%= gear.description %>
-    <% end %>
+      <%= @gear.brand %>
+      <%= @gear.model %>
+      <%= @gear.category %>
+      <%= @gear.description %>
   </div>
 </div>
