@@ -2,3 +2,34 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+li {
+	list-style: none;
+}
+
+.container {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.categories {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	list-style: none;
+	padding: 20px 20px;
+	margin: 20px 20px;
+}
+
+.category {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 30px;
+	border: 1px solid black;
+	height: 140px;
+}
+
+.category > li {
+
+}
