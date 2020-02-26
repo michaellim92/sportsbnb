@@ -4,11 +4,16 @@
   width: auto;
 }
 .show-images {
-  width: 50%;
+  width: 100%;
   height: auto;
   background-color: white;
   align-items: center;
-  
+  display: flex;
+  justify-content:space-between;
+
+  .carousel-item img {
+    max-height: 500px !important;
+  }
 
   #show-image {
     object-fit: cover;
@@ -22,7 +27,7 @@
 .show-info {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   height: auto;
   background: white;
   h2 {
