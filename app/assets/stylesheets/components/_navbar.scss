@@ -31,12 +31,12 @@
 }
 
 .show {
-  display: block;
+  // display: block;
 }
 
-.avatar-drop-down {
+#avatar-drop-down {
+  // display: none;
   position: relative;
-  display: inline-block;
   &:hover {
     cursor: pointer;
   }

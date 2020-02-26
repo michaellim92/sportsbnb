@@ -1,0 +1,35 @@
+
+.category > li > h2 {
+	font-size: 20px;
+	color: #ffffff;
+}
+
+// .container {
+// 	text-align: center;
+// 	padding-top: 40px;
+// }
+
+.categories {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	list-style: none;
+	padding: 20px 20px;
+	margin: 20px 20px;
+}
+
+.category {
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 30px;
+	height: 140px;
+	border-radius: 3%;
+	box-shadow: 2px 2px 4px grey;
+}
+
+.category > li {
+
+}
