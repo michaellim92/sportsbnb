@@ -1,0 +1,23 @@
+.show-body {
+  display: flex;
+  height: auto;
+  width: 100vw;
+}
+
+.show-images {
+  width: 50%;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.show-info {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  h2 {
+    width: 100%;
+    height: 200px;
+    background: gray;
+    
+  }
+}
