@@ -1,7 +1,24 @@
-<h1>Rentals</h1>
-<%= simple_form_for[@gear, @rental] do |f| %>
-  <% f.input :starts_at %>
-  <% f.input :ends_at %>
-  <% f.input :total_price %>
-  <% f.input :status %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2>Detail of the gear</h2>
+      <ul>
+        <li><%= @gear.brand%></li>
+        <li><%= @gear.model%></li>
+        <li><%= @gear.description%></li>
+        <li><%= @gear.price_per_day %></li>
+        <li><%= @gear.category %></li>
+      </ul>
+
+      <h2>Adding more information</h2>
+
+      <%= simple_form_for [@gear, @rental] do |f| %>
+        <%= f.input :starts_at %>
+        <%= f.input :ends_at %>
+          <% f.input :total_price %>
+          <% f.input :status %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
