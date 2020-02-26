@@ -3,6 +3,18 @@
 @import "avatar";
 @import "navbar";
 
+body {
+	font-family: arial;
+}
+
+a {
+	color: #ffffff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 li {
 	list-style: none;
 }
@@ -22,12 +34,15 @@ li {
 }
 
 .category {
+	background-position: center;
+	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 30px 30px;
-	border: 1px solid black;
+	border: 1px solid gray;
 	height: 140px;
+	border-radius: 5%;
 }
 
 .category > li {
