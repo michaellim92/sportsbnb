@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: blue;
   justify-content: space-between;
@@ -28,4 +27,24 @@
 .btn-containers {
   display: flex;
   width: 50%;
+}
+
+.show {
+  display: block;
+}
+
+.avatar-drop-down {
+  position: relative;
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.avatar-icon {
+  list-style: none;
+  float: right;
+  i {
+    right: 16px;
+  }
 }

@@ -12,9 +12,11 @@
   </div>
   <div class="row right-wrap">
       <% @gears.each do |gear| %>
-      <div class="gear-card col-4">
+    <%#= link_to "click me", gear_path(gear), class: 'gear-card-holder'  %>
+      <div class="gear-card col-4 mb-3">
         <%= render "gear-card", gear: gear %>
       </div>
       <% end %>
   </div>
 </div>
+

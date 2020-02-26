@@ -1,3 +1,4 @@
+<%# nav bar %>
 <div class="nav-container">
   <div class="navbar">
     <%= link_to root_path do%>
@@ -8,7 +9,9 @@
     <div class="btn-containers">
       <div>
         <ul class="nav-btns">
-          <li class="nav-btn">Browse Gear</li>
+          <%= link_to gears_path do %>
+            <li class="nav-btn">Browse Gear</li>
+          <% end %>
           <%= link_to dashboard_path do %>
             <li class="nav-btn">List Gear</li>
           <% end %>
@@ -17,8 +20,8 @@
           <% end %>
         </ul>
       </div>
-      <div class="avatar">
-        <div class="avatar">
+      <div class="avatar" id="profile-avatar">
+        <div class="avatar-pic">
           <!-- avatar image -->
         </div>
       </div>
