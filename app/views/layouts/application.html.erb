@@ -14,5 +14,14 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <script>
+      // avatar navbar menu
+      const avatar = document.getElementById("profile-avatar");
+      const dropdown = document.getElementById("avatar-drop-down");
+      avatar.addEventListener("click", (e) => {
+        dropdown.classList.toggle(".show");
+      });
+    </script>
   </body>
 </html>

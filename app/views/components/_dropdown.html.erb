@@ -1,0 +1,16 @@
+<%# dropdown account info %>
+<div id="avatar-drop-down">
+  <ul class="dropdown">
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <li class="avatar-icon" id="user-logout">
+        <i class="fas fa-power-off"></i><span>bLOG OUT</span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+    <%# <li class="avatar-icon" id="user-profile">
+      <i class="fas fa-user-astronaut"></i>
+    </li>
+    <li class="avatar-icon" id="user-settings">
+      <i class="fas fa-cog"></i>
+    </li> %>

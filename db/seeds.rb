@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-category = %i[Rock\ Climbing Snowboarding Skiiing Basketball Soccer Tennis Swimming Flag\ Football Golf Hiking]
+category = %w[Rock\ Climbing Snowboarding Skiiing Basketball Soccer Tennis Swimming Flag\ Football Golf Hiking]
 User.destroy_all
 Rental.destroy_all
 Gear.destroy_all
