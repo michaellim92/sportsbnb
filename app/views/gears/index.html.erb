@@ -1,11 +1,22 @@
-<div>
-  <h1>Gear List</h1>
-  <div>
-    <% @gears.each do |gear| %>
-      <%= gear.brand %>
-      <%= gear.model %>
-      <%= gear.category %>
-      <%= gear.description %>
-    <% end %>
+<div class="my-grid">
+  <div class="left-wrap">
+    <div class="gender-filter">
+      <p>MY GENDER FILTER</p>
+    </div>
+    <div class="color-filter">
+      <p>MY COLOR FILTER</p>
+    </div>
+    <div class="size-filter">
+      <p>MY SIZE FILTER</p>
+    </div>
+  </div>
+  <div class="row right-wrap">
+      <% @gears.each do |gear| %>
+    <%#= link_to "click me", gear_path(gear), class: 'gear-card-holder'  %>
+      <div class="gear-card col-4">
+        <%= render "gear-card", gear: gear %>
+      </div>
+      <% end %>
   </div>
 </div>
+

@@ -12,7 +12,8 @@ Rental.destroy_all
 Gear.destroy_all
 20.times do |n|
   user = User.create!(email: "jennifer" + "#{n}@yahoo.com", password: "something")
-  gear = Gear.create!(brand: "Burton", model: "4D2", description: "This is a snowboard description.", user: user, category: category.sample)
+  gear = Gear.create!(brand: "Burton", model: "4D2", description: "This is a snowboard description.", user: user, category: category.sample, price_per_day: 45)
   puts user
   puts gear.category
 end
+

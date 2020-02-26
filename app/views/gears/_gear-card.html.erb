@@ -1,0 +1,12 @@
+<div class="card-gear">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <%= link_to gear_path(gear), class: 'gear-card-link' do %>
+        <h2><%= gear.brand %></h2>
+      <% end %>
+      <p><%= gear.description %></p>
+    </div>
+    <h2 class="card-gear-pricing"><%= gear.price_per_day %></h2>
+  </div>
+</div>
