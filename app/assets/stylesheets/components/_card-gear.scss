@@ -1,7 +1,8 @@
 .card-gear {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3%;
+  box-shadow: 2px 2px 4px grey;
 }
 
 .card-gear > img {
@@ -11,12 +12,14 @@
 }
 
 .card-gear h2 {
+  padding: 6px 6px;
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-gear p {
+  padding: 0px 6px;
   font-size: 12px;
   opacity: .7;
   margin: 0;
@@ -30,4 +33,3 @@
   align-items: flex-end;
   position: relative;
 }
-
