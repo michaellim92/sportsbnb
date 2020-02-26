@@ -1,13 +1,13 @@
 <div>
   <div class="show-images">
-    <%= image_tag %>
+    <%= image_tag "rockclimbing.jpg"%>
   </div>
   <div class="show-info">
-    <h2>@gear.brand</h2>
-    <h3>@gear.model</h3>
-    <h3>@gear.category</h3>
-    <p>@gear.description</p>
-    <p>@gear.price_per_day</p>
+    <h2><%= @gear.brand %></h2>
+    <h3><%= @gear.model %></h3>
+    <h3><%= @gear.category %></h3>
+    <p><%= @gear.description %></p>
+    <p><%= @gear.price_per_day %></p>
   </div>
 </div>
 
