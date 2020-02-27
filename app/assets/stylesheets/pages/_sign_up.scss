@@ -1,0 +1,21 @@
+.sign-grid {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+
+  .left-sign {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70vh;
+  }
+  .right-sign {
+    width: 40vw;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
