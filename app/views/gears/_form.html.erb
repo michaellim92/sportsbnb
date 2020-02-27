@@ -4,5 +4,5 @@
   <%= f.input :description %>
   <%= f.input :category, collection: ["Skiing", "Snowboarding", "Basketball", "Tennis", "Soccer", "Flag Football", "Hiking", "Rock Climbing", "Golf"].sort, input_html: { multiple: false } %>
   <%= f.input :price_per_day %>
-  <%= f.submit %>
+  <%= f.button :submit, "Create Listing", class: "btn btn-primary"%>
 <% end %>
