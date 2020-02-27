@@ -27,4 +27,16 @@
       });
     </script>
   </body>
+
+  <script>
+     {/* nav bar active class */}
+    let navBtns = document.querySelectorAll('.nav-item');
+    for (let i = 0; i < navBtns.length; i++) {
+      console.log(navBtns);
+      navBtns[i].addEventListener('click', (e) => {
+        this.classList.toggle('.active');
+        this.nextSibling.classList.toggle('active');
+    })
+  };
+</script>
 </html>

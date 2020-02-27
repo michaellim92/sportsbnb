@@ -1,4 +1,6 @@
+<div class="container">
 <h1>My Rentals</h1>
+<<<<<<< Updated upstream
 <% @rentals.each do |r| %>
   <%= r.gear.brand %>
   <%= r.gear.model %>
@@ -8,3 +10,24 @@
   <%= r.status %>
   <%= link_to "Edit", edit_gear_path(r) %>
 <% end %>
+=======
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <% @rentals.each do |r| %>
+        <ul>
+          <h2><%= r.gear.brand %></h2>
+          <h3><%= r.gear.model %></h3>
+          <li><%= r.starts_at %></li>
+          <li><%= r.ends_at %></li>
+          <li><%= r.total_price %></li>
+          <li><%= r.status %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+<p><%= link_to "Return to dashboard", dashboard_path%></p>
+</div>
+
+
+>>>>>>> Stashed changes
