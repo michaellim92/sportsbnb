@@ -1,7 +1,5 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h2>Detail of the gear</h2>
+<div class="container mt-5">
+      <h2>Your new rental</h2>
       <ul>
         <li><%= @gear.brand%></li>
         <li><%= @gear.model%></li>
@@ -9,8 +7,7 @@
         <li><%= @gear.price_per_day %></li>
         <li><%= @gear.category %></li>
       </ul>
-
-      <h2>Adding more information</h2>
+      <h2 class="mt-5">Adding more information</h2>
 
       <%= simple_form_for [@gear, @rental] do |f| %>
         <%= f.input :starts_at, html5: true, as: :date, input_html: { value: Date.today } %>
