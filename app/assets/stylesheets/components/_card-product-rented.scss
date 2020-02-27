@@ -1,0 +1,42 @@
+.card-product-rented {
+  overflow: hidden;
+  height: 140px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-product-rented img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-rented h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.card-product-rented h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.card-product-rented p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.card-product-rented .card-product-rented-infos {
+  padding: 16px;
+}
