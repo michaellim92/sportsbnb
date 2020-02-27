@@ -1,42 +1,43 @@
 class Gear < ApplicationRecord
+  has_one_attached :photo
   belongs_to :user
   has_many :rentals, dependent: :destroy
   CATEGORIES = [
     {
       name: 'Rock Climbing',
-      photo: 'assets/categories/rockclimbing.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806574/dashboard/rockclimbing_f5cctd.jpg',
     },
     {
       name: 'Snowboarding',
-      photo: 'assets/categories/snowboarding.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806599/dashboard/snowboarding_qmzrcl.jpg',
     },
     {
       name: 'Skiing',
-      photo: 'assets/categories/skiing.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806582/dashboard/skiing_i3dvto.jpg',
     },
     {
       name: 'Basketball',
-      photo: 'assets/categories/basketball.png',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806474/dashboard/basketball_itkl2t.png',
     },
     {
       name: 'Soccer',
-      photo: 'assets/categories/soccer.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806607/dashboard/soccer_g8ln5g.jpg',
     },
     {
       name: 'Tennis',
-      photo: 'assets/categories/tennis.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806469/dashboard/tennis_j6t4ta.jpg',
     },
     {
       name: 'Flag Football',
-      photo: 'assets/categories/flagfootball.png',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806510/dashboard/flagfootball_fnpkeg.png',
     },
     {
       name: 'Golf',
-      photo: 'assets/categories/golfing.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806529/dashboard/golfing_xstuar.jpg',
     },
     {
       name: 'Hiking',
-      photo: 'assets/categories/hiking.jpg',
+      photo: 'https://res.cloudinary.com/dc4429yub/image/upload/v1582806563/dashboard/hiking_woakdd.jpg',
     }
   ].freeze
 end
