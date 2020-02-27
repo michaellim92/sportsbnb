@@ -1,23 +1,4 @@
 <div class="container">
 	<h2>What sports gear would you like to rent?</h2>
-	<ul class="categories">
-	<% array = [
-"https://images.unsplash.com/photo-1570327888340-c3e3d52e954b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-"https://images.unsplash.com/photo-1565733362858-3c610e8044cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-"https://images.unsplash.com/flagged/photo-1554758956-cd03b1906948?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-"https://images.unsplash.com/photo-1553108715-308e8537ce55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
-"https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-"https://images.unsplash.com/photo-1573112178335-0ab303a3f618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80",
-"https://images.unsplash.com/photo-1574763386959-bdeb6a0f9618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-"https://images.unsplash.com/photo-1535132011086-b8818f016104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-"https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
-]%>
-		<% Gear::CATEGORIES.each_with_index do |category, idx| %>
-			<%= link_to gears_path(category: category[:name]) do %>
-				<div class="category" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(101, 24, 7, 0.19)), url(<%= array[idx] %>%);">
-					<li><h2><%= category[:name] %></h2></li>
-				</div>
-			<% end %>
-		<% end %>
-	</ul>
+	<%= render 'categories' %>
 </div>
