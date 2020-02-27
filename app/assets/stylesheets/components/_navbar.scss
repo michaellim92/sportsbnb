@@ -20,8 +20,19 @@
 
 .avatar-drop-down {
   position: relative;
+}
+
+#navbarDropdown {
   &:hover {
     cursor: pointer;
+  }
+}
+
+.nav-item {
+  .active {
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
   }
 }
 

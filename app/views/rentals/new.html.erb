@@ -13,10 +13,17 @@
       <h2>Adding more information</h2>
 
       <%= simple_form_for [@gear, @rental] do |f| %>
-        <%= f.input :starts_at, html5: true %>
-        <%= f.input :ends_at, html5: true %>
-          <% f.input :total_price %>
-          <% f.input :status %>
+        <%= f.input :starts_at, html5: true, as: :date, input_html: { value: Date.today } %>
+        <%= f.input :ends_at, html5: true, as: :date, input_html: { value: Date.today }  %>
+        <% f.input :status %>
+        <%= hidden_field_tag :total_price %>
+        <br>
+        <p class="total-price d-none" data-price="<%= @gear.price_per_day %>"></p>
+      <h2>Adding payment information</h2>
+        <label for="p">Card number</label>
+        <input type="text">
+        <br>
+        <br>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
     </div>
