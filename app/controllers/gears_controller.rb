@@ -28,6 +28,7 @@ class GearsController < ApplicationController
   def create
     @gear = Gear.new(gears_params)
     @gear.user = current_user
+    binding.pry
     if @gear.save
       redirect_to gear_path(@gear)
     else

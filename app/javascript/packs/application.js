@@ -25,9 +25,9 @@ require("channels")
 import "bootstrap";
 
 const totalPrice = document.querySelector(".total-price");
-const price = parseInt(totalPrice.dataset.price, 10)
-const inputTotalPrice = document.getElementById("total_price");
 if (totalPrice) {
+  const price = parseInt(totalPrice.dataset.price, 10);
+  const inputTotalPrice = document.getElementById("total_price");
   const startsAt = document.getElementById("rental_starts_at");
   const endsAt = document.getElementById("rental_ends_at");
   startsAt.addEventListener("change", () => {

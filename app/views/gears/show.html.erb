@@ -1,24 +1,18 @@
-<div class="container" id="show-body">
-  <div class="show-images">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="container mt-5">
+  <div class="show-grid">
+    <div class="left-show">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= image_tag "sb2.jpg", class: "d-block w-100"%>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag "sb1.jpg", class: "d-block w-100"%>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag "sb3.jpg", class: "d-block w-100"%>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag "sb4.jpg", class: "d-block w-100"%>
-        </div>
+        <% @gear.photos.map(&:key).each_with_index do |k,i| %>
+          <div class="carousel-item <%= 'active' if i.zero? %>">
+            <%= cl_image_tag k, height: 300, width: 300, crop: :fill, class: "d-block w-100"%>
+          </div>
+        <% end %>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -28,19 +22,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
-    <div class="show-info">
-      <div class="show-title">
-        <h2><%= @gear.brand.upcase %></h2>
       </div>
-      <div class="show-info-description">
-        <h3><%= @gear.model.upcase %></h3>
-        <h4><%= @gear.category %></h4>
-        <p><%= @gear.description.capitalize %></p>
-        <p>£<%= @gear.price_per_day %> per day</p>
-      </div>
-      <%= link_to "Rent Now", new_gear_rental_path(@gear), class: "btn btn-primary rent-now-btn" %>
     </div>
-    <%#= link_to "Rent Now", %>
+    <div class="right-show">
+      <h3> <%=@gear.brand.upcase %></h3>
+      <h4> <%=@gear.model%></h4><br>
+      <h6> <%=@gear.description%></h6>
+      <h6>$<%=@gear.price_per_day%> per day</h6><br>
+      <%= link_to "Rent", new_gear_rental_path(@gear), class: "btn btn-secondary" %>
+    </div>
   </div>
-
+</div>

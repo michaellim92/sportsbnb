@@ -1,8 +1,8 @@
-<div class="container">
-  <h2>Rent Snowboarding Gear</h2>
-  <div class="my-grid">
-    <div class="left-wrap">
-      <div class="gender-filter">
+<div class="container mt-5">
+  <h2>Rent <%= params[:category] %> Gear</h2>
+  <div class="row align-items-start">
+    <div class="col-3 left-wrap p-4" style="text-overflow: ellipsis; overflow: hidden;">
+      <div class="gender-filter mb-3">
         <h5>Gender</h5>
         <form action="">
           <input type="checkbox" id="gender1" name="gender1" value="Male">
@@ -15,7 +15,7 @@
           <label for="gender4">Unisex</label>
         </form>
       </div>
-      <div class="color-filter">
+      <div class="color-filter mb-3">
         <h5>Color</h5>
         <form action="">
           <input type="color" id="favcolor" name="favcolor" value="#ff0000">
@@ -44,13 +44,15 @@
         </form>
       </div>
     </div>
-    <div class="row right-wrap">
-        <% @gears.each do |gear| %>
-      <%#= link_to "click me", gear_path(gear), class: 'gear-card-holder'  %>
-        <div class="gear-card col-4 mb-3">
-          <%= render "gear-card", gear: gear %>
-        </div>
-        <% end %>
+    <div class="col-9">
+      <div class="row">
+          <% @gears.each do |gear| %>
+        <%#= link_to "click me", gear_path(gear), class: 'gear-card-holder'  %>
+          <div class="gear-card col-md-4 mb-3 col-sm-12">
+            <%= render "gear-card", gear: gear %>
+          </div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
