@@ -4,6 +4,7 @@
   justify-content: space-around;
 
 
+
   .left-wrap {
     width: 20vw;
     border: lightgrey 1px solid;
@@ -15,17 +16,23 @@
   }
 
   .right-wrap {
-    width: 50vw;
+    width: 55vw;
   }
 
-  .gear-card{
-
-    .gear-card-link{
-
-    }
-  }
 }
 
 .size > input {
   display: inline;
 }
+
+.gear-renter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  position: absolute;
+  right: 16px;
+  top: -20px;
+}
+
