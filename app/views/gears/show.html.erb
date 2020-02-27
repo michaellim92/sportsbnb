@@ -1,13 +1,38 @@
 <div>
   <div class="show-images">
-    <%= image_tag "rockclimbing.jpg"%>
-  </div>
-  <div class="show-info">
-    <h2><%= @gear.brand %></h2>
-    <h3><%= @gear.model %></h3>
-    <h3><%= @gear.category %></h3>
-    <p><%= @gear.description %></p>
-    <p><%= @gear.price_per_day %></p>
-  </div>
-</div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <% @gear.photos.map(&:key).each_with_index do |k,i| %>
+          <div class="carousel-item <%= 'active' if i.zero? %>">
+            <%= cl_image_tag k, height: 300, width: 300, crop: :fill, class: "d-block w-100"%>
+          </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="show-info">
+      <div class="show-title">
+        <h2><%= @gear.brand.upcase %></h2>
+      </div>
+      <div class="show-info-description">
+        <h3><%= @gear.model.upcase %></h3>
+        <h4><%= @gear.category %></h4>
+        <p><%= @gear.description.capitalize %></p>
+        <p>£<%= @gear.price_per_day %> per day</p>
+      </div>
+      <%= link_to "Rent Now", new_gear_rental_path(@gear), class: "btn btn-primary rent-now-btn" %>
+    </div>
+
 

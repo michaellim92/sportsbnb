@@ -1,8 +1,20 @@
-<h1>All Listings</h1>
-<% @gears.each do |g| %>
-  <%= g.brand %>
-  <%= g.model %>
-  <%= link_to "Edit", edit_gear_path(g) %>
-<% end %>
+<div class=container>
+  <h1>All Listings</h1>
+  </div>
+  <div class="container">
+  <%= link_to "Add New Gear", new_gear_path %>
+    <% if @gears.present? %>
+      <div class="card-product">
+          <% @gears.each do |g| %>
+        <%= cl_image_tag g.photos.first.key, crop: :pad %>
+        <div class="card-product-infos">
+            <h2><%= g.brand %></h2>
+            <p><%= g.model %><p>
+            <%= link_to "Edit", edit_gear_path(g) %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to "Add New Gear", new_gear_path %>
