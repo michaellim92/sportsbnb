@@ -3,7 +3,11 @@
   <% if @rentals.length >= 1 %>
     <% @rentals.each do |r| %>
       <div class="card-product-rented">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% if r.gear.photos.attached? %>
+          <%= cl_image_tag r.gear.photos.first.key %>
+        <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% end %>
         <div class="card-product-infos">
               <h2><%= r.gear.brand %></h2>
               <h3><%= r.gear.model %></h3>
