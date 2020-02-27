@@ -10,6 +10,7 @@ class RentalsController < ApplicationController
     @rental.gear = @gear
     @rental.user = current_user
     @rental.total_price = params[:total_price]
+    raise
     # @rental.total_price = (@gear.price_per_day || 10) * (((@rental.ends_at - @rental.starts_at)/86400000).round + 1)
     if @rental.save
       redirect_to rented_path
