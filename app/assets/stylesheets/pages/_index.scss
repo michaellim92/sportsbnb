@@ -1,3 +1,18 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new_gear";
+@import "show_gear";
+@import "sign_up";
+
+body {
+	margin: 0px auto;
+	background-color: #ffffff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}

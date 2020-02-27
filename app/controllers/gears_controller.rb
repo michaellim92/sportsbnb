@@ -18,6 +18,7 @@ class GearsController < ApplicationController
     # @categories = @categories.sort
     # @categories = Gear.all.map(&:category).sort
     # @categories = Gear.all.pluck(:category).uniq.sort
+    
   end
 
   def show
@@ -54,7 +55,7 @@ class GearsController < ApplicationController
   private
 
   def gears_params
-    params.require(:gear).permit(:brand, :model, :description, :price_per_day)
+    params.require(:gear).permit(:brand, :model, :description, :price_per_day, :photo)
   end
 
   def find_gear

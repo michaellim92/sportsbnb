@@ -9,8 +9,9 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.gear = @gear
     @rental.user = current_user
+    # @rental.total_price = (@gear.price_per_day || 10) * (((@rental.ends_at - @rental.starts_at)/86400000).round + 1)
     if @rental.save
-      redirect_to gear_path(@gear)
+      redirect_to rented_path
     else
       render :new
     end

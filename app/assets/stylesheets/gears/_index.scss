@@ -1,27 +1,24 @@
+.left-wrap {
+  border: lightgrey 1px solid;
+}
 
-.my-grid{
-  display: flex;
-  justify-content: space-around;
+.size > input {
+  display: inline;
+}
 
+.gear-renter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  position: absolute;
+  right: 16px;
+  top: -20px;
+}
 
-  .left-wrap {
-    width: 30vw;
-    background-color: lightgreen;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 80vh;
-  }
-
-  .right-wrap {
-    width: 60vw;
-    background-color: lightyellow;
-  }
-
-  .gear-card{
-
-    .gear-card-link{
-
-    }
-  }
+#favcolor {
+  background: none;
+  padding: 0;
+  border: none;
 }
