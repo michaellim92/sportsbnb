@@ -3,11 +3,11 @@
   </div>
   <div class="container">
   <%= link_to "Add New Gear", new_gear_path %>
-    <% if @gears.length > 1 %>
+    <% if @gears.present? %>
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
           <% @gears.each do |g| %>
+        <%= cl_image_tag g.photos.first.key, crop: :pad %>
+        <div class="card-product-infos">
             <h2><%= g.brand %></h2>
             <p><%= g.model %><p>
             <%= link_to "Edit", edit_gear_path(g) %>
