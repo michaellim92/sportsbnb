@@ -17,6 +17,7 @@
                 <p><%= r.status %></p>
                 <h3><%= r.total_price%> £</h3>
           </div>
+          <p><%= link_to "Remove rental", rental_path(r),method: :delete%></p>
         </div>
       <% end %>
     <% end %>
