@@ -1,3 +1,8 @@
+#backgroundpic {
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(200, 200, 200, 0.5)), url(https://images.unsplash.com/photo-1490100667990-4fced8021649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80);
+
+}
+
 .show-grid{
   display: flex;
   justify-content: space-around;
@@ -19,5 +24,4 @@
   .right-show {
     width: 30vw;
   }
-
 }
