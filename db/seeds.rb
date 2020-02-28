@@ -27,7 +27,7 @@ ataylo = User.create!(email: "Alexis.taylor@clovelcub.co.uk", password: "sportin
 
 # suzanne
 # File.exist? __dir__ + "app/assets/images/user_seed_images/at/at1.1.jpg"
-# sz_file = Dir.glob("#{Rails.root}/app/assets/images/user_seed_images/ar/ar1*.jpg")
+sz_file = Dir.glob("#{Rails.root}/app/assets/images/user_seed_images/ar/ar1*.jpg")
 suzanne1 = Gear.create!(user_id: spierce.id, brand: "Santa Cruz", model: "Backside", category: "Snowboarding", location: "Highbury Islington, London", description: "spierce.id5cm, I'm 5'4\", and it fits perfectly.  Used 4 times at the beginning of the season but in great condition", price_per_day: 12)
 suzanne2 = Gear.create!(user_id: spierce.id, brand: "Burton", model: "Aera", category: "Snowboarding", location: "Highbury Islington, London", description: "size M", price_per_day: 10)
 suzanne3 = Gear.create!(user_id: spierce.id, brand: "Vans", model: "Saviour", category: "Snowboarding", location: "Highbury Islington, London", description: "UK 5.5, EU 38, ", price_per_day: 15)
