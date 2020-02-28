@@ -1,4 +1,4 @@
-<div class="container mt-5 py-5">
+<div class="container mt-5 py-5" id="backgroundpic">
   <div class="show-grid">
     <div class="left-show">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -26,10 +26,13 @@
     </div>
     <div class="right-show">
       <h3> <%=@gear.brand.upcase %></h3>
-      <h4> <%=@gear.model%></h4><br>
-      <h6> <%=@gear.description%></h6>
-      <h6>$<%=@gear.price_per_day%> per day</h6><br>
+      <hr>
+      <h4>Model: <%=@gear.model%></h4>
+      <h6>Category <%= @gear.category %> </h6><br>
+      <h6>Description: <%=@gear.description%></h6> <br>
+      <h5>$<%=@gear.price_per_day%> per day</h5><br>
       <%= link_to "Rent", new_gear_rental_path(@gear), class: "btn btn-secondary" %>
     </div>
   </div>
 </div>
+
