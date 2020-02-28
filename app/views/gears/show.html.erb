@@ -1,16 +1,16 @@
-<div class="container mt-5 py-5" id="backgroundpic">
+<div class="container mt-5 py-5" id="">
   <div class="show-grid">
     <div class="left-show">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <% @gear.photos.size.times do |index| %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<%= 'active' if index.zero? %>"></li>
+        <% end %>
       </ol>
       <div class="carousel-inner">
         <% @gear.photos.map(&:key).each_with_index do |k,i| %>
           <div class="carousel-item <%= 'active' if i.zero? %>">
-            <%= cl_image_tag k, height: 300, width: 300, crop: :fill, class: "d-block w-100"%>
+            <%= cl_image_tag k, class: "d-block w-100 carousel-image"%>
           </div>
         <% end %>
       </div>
@@ -25,13 +25,31 @@
       </div>
     </div>
     <div class="right-show">
-      <h3> <%=@gear.brand.upcase %></h3>
+      <h3> <%=@gear.brand.upcase %> - <%=@gear.model%> <span class="currency-symbol text-muted">$<%= number_with_delimiter(@gear.price_per_day) %> per day</span></h3>
       <hr>
-      <h4>Model: <%=@gear.model%></h4>
-      <h6>Category <%= @gear.category %> </h6><br>
-      <h6>Description: <%=@gear.description%></h6> <br>
-      <h5>$<%=@gear.price_per_day%> per day</h5><br>
-      <%= link_to "Rent", new_gear_rental_path(@gear), class: "btn btn-secondary" %>
+      <div class="mb-3">
+        <span class="category-span px-3 py-2 mb-3"><%= @gear.category %></span>
+      </div>
+      <h6 class="text-muted mb-0"><%=@gear.description%></h6> <br>
+      <hr>
+      <h5>Rent</h5>
+      <%= simple_form_for [@gear, @rental] do |f| %>
+        <div class="row">
+          <div class="col-6">
+            <%= f.input :starts_at, html5: true, as: :date, input_html: { value: Date.today } %>
+          </div>
+          <div class="col-6">
+            <%= f.input :ends_at, html5: true, as: :date, input_html: { value: Date.today }  %>
+          </div>
+        </div>
+        <% f.input :status %>
+        <%= hidden_field_tag :total_price %>
+        <p class="total-price d-none" data-price="<%= @gear.price_per_day %>"></p>
+        <h5>Add payment information</h5>
+        <label for="p">Card number</label>
+        <input type="text" class="form-control mb-3" placeholder="1644 2842 3323 2364">
+        <%= f.submit class: 'btn rent-btn' %>
+      <% end %>
     </div>
   </div>
 </div>

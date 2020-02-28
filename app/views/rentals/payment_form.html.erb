@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="payment-form p-5">
+    <h3 class="text-center text-muted mb-5">Confirm Payment</h3>
+    <form action="/rented">
+      <div class="row mb-3">
+        <div class="col-6">
+          <label for="name">Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col-6">
+          <label for="CVV">CVV</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <label for="card_number">Card Number</label>
+      <input type="text" class="form-control mb-3">
+      <div class="d-flex align-items-end justify-content-between mb-4">
+        <div class="d-flex flex-column align-items-start">
+          <label for="date">Expiration Date</label>
+          <input type="date">
+        </div>
+        <%= image_tag 'visa.png', class:'visa' %>
+      </div>
+      <input type="submit" value="Confirm" class="btn confirm-btn">
+    </form>
+  </div>
+</div>

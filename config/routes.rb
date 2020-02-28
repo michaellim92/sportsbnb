@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   unauthenticated do
     devise_scope :user do
       root to: 'devise/sessions#new', as: :unauthenticated_root
     end
   end
- 
+
  authenticated :user do
   root to: 'gears#dashboard'
  end
@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   resources :gears do
     resources :rentals, only: [:new, :create]
   end
-  resources :rentals, only: :destroy
+  resources :rentals, only: :destroy do
+    get :payment_form, on: :collection
+  end
   get "dashboard", to: "users#dashboard", as: :dashboard
   get "rented", to: "users#rented", as: :rented
 end
