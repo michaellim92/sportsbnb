@@ -29,8 +29,20 @@
         </li>
       </ul>
     </div>
+  <%# <% elsif params[:action] != 'new' && params[:controller] != 'devise/sessions' %>
   <% else %>
-    <li class="nav-item dropdown">
-    </li>
+   
+    <%#  -------------------  %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="#sign-up-dash" class="nav-link">Browse</a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+        </li>
+        
+      </ul>
+    </div>
   <% end %>
 </div>
