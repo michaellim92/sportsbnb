@@ -111,7 +111,7 @@ p "marco marco"
 # patrick
 ph_1 = Dir.glob("#{Rails.root}/app/assets/images/user_seed_images/ph/ph1*.jpg")
 
-pat1 = Gear.create!(user_id: pholme.id, brand: "Galloway", model: "Warbird Set", category: "Snowboarding", location: "Glasgow", description: "Callaway Golf Clubs Set \
+pat1 = Gear.create!(user_id: pholme.id, brand: "Galloway", model: "Warbird Set", category: "Golf", location: "Glasgow", description: "Callaway Golf Clubs Set \
 Callaway Big Bertha 460 Driver 10 deg..S Flex \
 Callaway Big Bertha 3 Wood.....R Flex \
 Callaway X18 Irons Set..3- SW. Reg Graphite .Excellent Condition. \
