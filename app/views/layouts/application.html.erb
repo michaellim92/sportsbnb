@@ -12,7 +12,10 @@
   <body>
     <%= render 'components/navbar' %>
     <%= render 'components/flashes' %>
-    <%= yield %>
+    <div class="main-container">
+      <%= yield %>
+    </div>
+    <%= render 'components/footer' %>
   </body>
 
   <script>
