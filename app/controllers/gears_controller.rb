@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_gear, only: [:show, :edit, :destroy]
   def index
     # if params[:category] is there
@@ -28,7 +28,6 @@ class GearsController < ApplicationController
   def create
     @gear = Gear.new(gears_params)
     @gear.user = current_user
-    binding.pry
     if @gear.save
       redirect_to gear_path(@gear)
     else

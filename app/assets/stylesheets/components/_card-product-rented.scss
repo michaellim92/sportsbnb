@@ -1,17 +1,19 @@
 .card-product-rented {
   overflow: hidden;
-  height: 140px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .card-product-rented img {
   height: 100%;
-  width: 120px;
+  width: 200px;
   object-fit: cover;
+  margin-right: 30px;
 }
 
 .card-product-rented h2 {
