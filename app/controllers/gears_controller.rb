@@ -6,7 +6,11 @@ class GearsController < ApplicationController
     # then filter gears with .where(...)
     # else
     # Gear.all
-    @gears = Gear.all
+    if params[:category].present?
+      @gears = Gear.where(category: params[:category])
+    else
+      @gears = Gear.all
+    end
   end
 
   def dashboard
