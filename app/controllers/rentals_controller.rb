@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  before_action :find_gear, except: :payment_form
+  before_action :find_gear, except: [:payment_form, :destroy]
 
   def new
     @rental = Rental.new
@@ -19,6 +19,12 @@ class RentalsController < ApplicationController
   end
 
   def payment_form
+  end
+
+  def destroy
+    @rental= Rental.find(params[:id])
+    @rental.destroy
+    redirect_to root_path
   end
 
   private
