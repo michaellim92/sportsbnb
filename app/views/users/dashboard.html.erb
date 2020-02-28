@@ -12,10 +12,12 @@
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <% end %>
           <div class="card-product-infos">
+              <div class="description">
                 <h2><%= g.brand %></h2>
                 <h3><%= g.model %></h3>
                 <p><%= g.description %></p>
-                <h3><%= g.price_per_day %> £ </h3>
+              </div>
+              <h3><%= g.price_per_day %> £ </h3>
           </div>
         </div>
       <% end %>
