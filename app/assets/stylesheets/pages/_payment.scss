@@ -1,0 +1,23 @@
+.visa {
+  object-fit: contain;
+  width: 150px;
+}
+
+.payment-form {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: $gray;
+  transition: 0.3s;
+  &:hover {
+    color: white;
+    background-color: #1EDD88;
+  }
+}

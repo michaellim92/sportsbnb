@@ -22,11 +22,12 @@ class GearsController < ApplicationController
     # @categories = @categories.sort
     # @categories = Gear.all.map(&:category).sort
     # @categories = Gear.all.pluck(:category).uniq.sort
-    
+
   end
 
   def show
     find_gear
+    @rental = Rental.new
   end
 
   def create

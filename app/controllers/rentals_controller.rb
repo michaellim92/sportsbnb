@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  before_action :find_gear
+  before_action :find_gear, except: :payment_form
 
   def new
     @rental = Rental.new
@@ -12,10 +12,13 @@ class RentalsController < ApplicationController
     @rental.total_price = params[:total_price]
     # @rental.total_price = (@gear.price_per_day || 10) * (((@rental.ends_at - @rental.starts_at)/86400000).round + 1)
     if @rental.save
-      redirect_to rented_path
+      redirect_to payment_form_rentals_path
     else
       render :new
     end
+  end
+
+  def payment_form
   end
 
   private
