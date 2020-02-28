@@ -14,12 +14,6 @@ if Rails.env.development?
   Rental.destroy_all
   Gear.destroy_all
 end
-# 20.times do |n|
-#   user = User.create!(email: "jennifer" + "#{n}@yahoo.com", password: "something")
-#   gear = Gear.create!(brand: "Burton", model: "4D2", description: "This is a snowboard description.", user: user, category: category.sample, price_per_day: 45)
-#   puts user
-#   puts gear.category
-# end
 
 spierce = User.create!(email: "Suzanne.pierce@gmail.co.uk", password: "sporting", first_name: "Suzanne", last_name: "Pierce")
 khuang = User.create!(email: "Kye.Huang93@gmail.co.uk", password: "sporting", first_name: "Kye", last_name: "Huang")
@@ -54,8 +48,6 @@ les4 = Gear.create!(user_id: llishi.id, brand: "La Sportiva", model: "Genius", c
 
 # alissa
 alis1 = Gear.create!(user_id: arowle.id, brand: "Taylor Made", model: "MC", category: "Golf", location: "Hammersmith,", description: "Golf Clubs full set and bag ( Men's Right-Handed,) Taylor made MC irons. Titleist driver, ping g10 3 wood, Taylor made burner rescue wood and srixon wedges..no putter included. All stiff shafts. Condition is well used as you can see from.photis but they're a good set of clubs and a lot better than some full sets you see for sale on here. The bag is broken on the strap and has some broken zips but works fine! Any questions let me know!", price_per_day: 25)
-at_path = "app/assets/images/user_seed_images/at/"
-at1 = File.open(at_path)
 
 # jean
 jean1 = Gear.create!(user_id: jspence.id, brand: "Nike", model: "Huarache Elite", category: "Flag Football", location: "New Town, Edinburgh", description: "size: EU 40", price_per_day: 10)
@@ -85,6 +77,7 @@ z4 = Gear.create!(user_id: zfoo.id, brand: "Burton", model: "Ruler", category: "
 # alexis
 al1 = Gear.create!(user_id: ataylo.id, brand: "Boreal", model: "Pyros", category: "Rock Climbing", location: "Nottinghill, London", description: "Great pair of shoes that still have plenty of life left in them! Would highly recommend this brand.", price_per_day: 12)
 al2 = Gear.create!(user_id: ataylo.id, brand: "Unbranded", model: "Chalk Bag", category: "Rock Climbing", location: "Nottinghill, London", description: "Hand made chalk bag, lined with fleece and finished with elastic and toggle. Belt loop included.", price_per_day: 13)
+
 
 
 
