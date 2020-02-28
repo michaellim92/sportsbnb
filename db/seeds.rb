@@ -14,12 +14,6 @@ if Rails.env.development?
   Rental.destroy_all
   Gear.destroy_all
 end
-# 20.times do |n|
-#   user = User.create!(email: "jennifer" + "#{n}@yahoo.com", password: "something")
-#   gear = Gear.create!(brand: "Burton", model: "4D2", description: "This is a snowboard description.", user: user, category: category.sample, price_per_day: 45)
-#   puts user
-#   puts gear.category
-# end
 
 spierce = User.create!(email: "Suzanne.pierce@gmail.co.uk", password: "sporting", first_name: "Suzanne", last_name: "Pierce")
 khuang = User.create!(email: "Kye.Huang93@gmail.co.uk", password: "sporting", first_name: "Kye", last_name: "Huang")
@@ -33,7 +27,7 @@ ataylo = User.create!(email: "Alexis.taylor@clovelcub.co.uk", password: "sportin
 
 # suzanne
 # File.exist? __dir__ + "app/assets/images/user_seed_images/at/at1.1.jpg"
-# sz_file = Dir.glob("#{Rails.root}/app/assets/images/user_seed_images/ar/ar1*.jpg")
+sz_file = Dir.glob("#{Rails.root}/app/assets/images/user_seed_images/ar/ar1*.jpg")
 suzanne1 = Gear.create!(user_id: spierce.id, brand: "Santa Cruz", model: "Backside", category: "Snowboarding", location: "Highbury Islington, London", description: "spierce.id5cm, I'm 5'4\", and it fits perfectly.  Used 4 times at the beginning of the season but in great condition", price_per_day: 12)
 suzanne2 = Gear.create!(user_id: spierce.id, brand: "Burton", model: "Aera", category: "Snowboarding", location: "Highbury Islington, London", description: "size M", price_per_day: 10)
 suzanne3 = Gear.create!(user_id: spierce.id, brand: "Vans", model: "Saviour", category: "Snowboarding", location: "Highbury Islington, London", description: "UK 5.5, EU 38, ", price_per_day: 15)
@@ -54,8 +48,6 @@ les4 = Gear.create!(user_id: llishi.id, brand: "La Sportiva", model: "Genius", c
 
 # alissa
 alis1 = Gear.create!(user_id: arowle.id, brand: "Taylor Made", model: "MC", category: "Golf", location: "Hammersmith,", description: "Golf Clubs full set and bag ( Men's Right-Handed,) Taylor made MC irons. Titleist driver, ping g10 3 wood, Taylor made burner rescue wood and srixon wedges..no putter included. All stiff shafts. Condition is well used as you can see from.photis but they're a good set of clubs and a lot better than some full sets you see for sale on here. The bag is broken on the strap and has some broken zips but works fine! Any questions let me know!", price_per_day: 25)
-at_path = "app/assets/images/user_seed_images/at/"
-at1 = File.open(at_path)
 
 # jean
 jean1 = Gear.create!(user_id: jspence.id, brand: "Nike", model: "Huarache Elite", category: "Flag Football", location: "New Town, Edinburgh", description: "size: EU 40", price_per_day: 10)
