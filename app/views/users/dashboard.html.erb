@@ -1,19 +1,25 @@
-<div class=container>
-  <h1>All Listings</h1>
-  </div>
-  <div class="container">
-  <%= link_to "Add New Gear", new_gear_path %>
-    <% if @gears.length > 1 %>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <% @gears.each do |g| %>
-            <h2><%= g.brand %></h2>
-            <p><%= g.model %><p>
-            <%= link_to "Edit", edit_gear_path(g) %>
+
+<div class="container mt-5">
+  <h2>All listings</h2>
+  <div class="container mt-4">
+    <%= link_to "Add New Gear", new_gear_path%>
+    <% if @gears.length >= 1 %>
+      <% @gears.each do |g| %>
+        <div class="card-product-rented">
+          <% if g.photos.attached? %>
+            <%= cl_image_tag g.photos.first.key %>
+          <% else %>
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <% end %>
+          <div class="card-product-infos">
+                <h2><%= g.brand %></h2>
+                <h3><%= g.model %></h3>
+                <p><%= g.description %></p>
+                <h3><%= g.price_per_day %> £ </h3>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
+  <p><%= link_to "Return to dashboard", root_path%></p>
 </div>

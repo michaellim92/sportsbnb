@@ -1,5 +1,5 @@
 class GearsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_gear, only: [:show, :edit, :destroy]
   def index
     # if params[:category] is there
@@ -54,7 +54,7 @@ class GearsController < ApplicationController
   private
 
   def gears_params
-    params.require(:gear).permit(:brand, :model, :description, :price_per_day, :photo)
+    params.require(:gear).permit(:brand, :model, :description, :category, :price_per_day, photos: [])
   end
 
   def find_gear

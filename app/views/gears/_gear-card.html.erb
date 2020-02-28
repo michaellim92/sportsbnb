@@ -1,13 +1,21 @@
-<div class="card-gear">
-  <img src="https://images.unsplash.com/photo-1512821062947-6eda5253c3e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
-  <div class="card-gear-infos">
-    <div>
-      <%= link_to gear_path(gear), class: 'gear-card-link' do %>
-      <h2> <%= gear.brand %></h2>
-      <% end %>
-      <p> <%= gear.description %></p>
+<% images = ["https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1580806041/tt0eictierjybesbq2qm.jpg", "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1580748965/oc11enrrgmhzxqcwfpet.jpg", "https://avatars1.githubusercontent.com/u/50847314?v=4", "https://avatars3.githubusercontent.com/u/46051221?v=4", "https://avatars1.githubusercontent.com/u/44987518?v=4", "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1581263534/w8fwgs10farofwahfwkt.jpg", "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1581366327/rjq8dkwjn95qg4df07fr.jpg"] %>
+
+<%= link_to gear_path(gear), class: 'gear-card-link' do %>
+  <div class="card-gear">
+    <% if gear.photos.any? %>
+      <%= cl_image_tag gear.photos.first.key %>
+    <% else %>
+      <img src="https://images.unsplash.com/photo-1512821062947-6eda5253c3e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" />
+    <% end %>
+    <div class="card-gear-infos">
+      <div>
+        <h2> <%= gear.brand %></h2>
+        <p> <%= gear.model %></p>
+      </div>
+      <h2 class="card-gear-pricing"> $<%=gear.price_per_day%></h2>
+      <img src="<%= images.sample %> " class="gear-renter" />
     </div>
-    <h2 class="card-gear-pricing"> $<%=gear.price_per_day%></h2>
-    <img src="https://images.unsplash.com/photo-1492681290082-e932832941e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" class="gear-renter" />
   </div>
-</div>
+<% end %>
+
+
