@@ -10,14 +10,14 @@
   <% if user_signed_in? %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Browse", root_path, class: "nav-link" %>
+        <li class="nav-item">
+          <%= active_link_to "Browse", root_path, active: :exact, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "List Gear", dashboard_path, class: "nav-link" %>
+          <%= active_link_to "List Gear", dashboard_path, active: :exact, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My Rentals", rented_path, class: "nav-link" %>
+          <%= active_link_to "My Rentals", rented_path, active: :exact, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
