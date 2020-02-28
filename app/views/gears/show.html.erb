@@ -24,32 +24,33 @@
       </a>
       </div>
     </div>
-    <div class="right-show">
-      <h3> <%=@gear.brand.upcase %> - <%=@gear.model%> <span class="currency-symbol text-muted">$<%= number_with_delimiter(@gear.price_per_day) %> per day</span></h3>
-      <hr>
-      <div class="mb-3">
-        <span class="category-span px-3 py-2 mb-3"><%= @gear.category %></span>
-      </div>
-      <h6 class="text-muted mb-0"><%=@gear.description%></h6> <br>
-      <hr>
-      <h5>Rent</h5>
-      <%= simple_form_for [@gear, @rental] do |f| %>
-        <div class="row">
-          <div class="col-6">
-            <%= f.input :starts_at, html5: true, as: :date, input_html: { value: Date.today } %>
-          </div>
-          <div class="col-6">
-            <%= f.input :ends_at, html5: true, as: :date, input_html: { value: Date.today }  %>
-          </div>
+    <div class="right-show d-flex flex-column">
+      <div>
+        <h3> <%=@gear.brand.upcase %> - <%=@gear.model%> <span class="currency-symbol text-muted">$<%= number_with_delimiter(@gear.price_per_day) %> per day</span></h3>
+        <hr>
+        <div class="mt-4 mb-4">
+          <span class="category-span px-2 py-1"><%= @gear.category %></span>
         </div>
-        <% f.input :status %>
-        <%= hidden_field_tag :total_price %>
-        <p class="total-price d-none" data-price="<%= @gear.price_per_day %>"></p>
-        <h5>Add payment information</h5>
-        <label for="p">Card number</label>
-        <input type="text" class="form-control mb-3" placeholder="1644 2842 3323 2364">
-        <%= f.submit class: 'btn rent-btn' %>
-      <% end %>
+        <h6 class="text-muted mb-0"><span class="font-weight-bold text-dark">Description</span>: <%=@gear.description%></h6> <br>
+      </div>
+      <div>
+        <hr>
+        <h5>Rent</h5>
+        <%= simple_form_for [@gear, @rental] do |f| %>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :starts_at, html5: true, as: :date, input_html: { value: Date.today } %>
+            </div>
+            <div class="col-6">
+              <%= f.input :ends_at, html5: true, as: :date, input_html: { value: Date.today }  %>
+            </div>
+          </div>
+          <% f.input :status %>
+          <%= hidden_field_tag :total_price %>
+          <p class="total-price d-none" data-price="<%= @gear.price_per_day %>"></p>
+          <%= f.submit 'Rent', class: 'btn rent-btn w-100' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
