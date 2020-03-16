@@ -1,0 +1,5 @@
+meta_product_name: "SportsBnB"
+meta_title: "Start your adventure"
+meta_description: "Get on with your new adventures without the hassle of buying equipment"
+meta_image: "img2.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
