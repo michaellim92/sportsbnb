@@ -32,7 +32,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary'
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 group :development, :test do
   gem 'pry-byebug'
